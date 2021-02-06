@@ -1,0 +1,3 @@
+module CardModel {
+    exports cardmodel;
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardclient.Controller">
+   <top>
+      <HBox fx:id="hBoxUpperBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Address:" />
+            <TextField fx:id="txtAddress" promptText="Address" text="localhost" />
+            <Label text="Port:" />
+            <TextField fx:id="txtPort" promptText="Port" text="7000" />
+            <Button mnemonicParsing="false" onAction="#connectToServer" prefHeight="26.0" prefWidth="123.0" text="Connect" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <ListView fx:id="listCard" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="213.0" prefWidth="252.0">
+                     <children>
+                        <Label text="Your card:" />
+                        <ImageView fx:id="imgCurrentCard" fitHeight="160.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="txtCurrentCard" text="...">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="213.0" prefWidth="145.0">
+                     <children>
+                        <Label text="Your score:" />
+                        <Label fx:id="txtScore" text="..." textFill="#0015ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtResult" text="...">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="267.0">
+               <children>
+                  <HBox fx:id="hBoxMoreCards" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="More cards?" />
+                              <Button mnemonicParsing="false" onAction="#askForNewCard" prefHeight="26.0" prefWidth="46.0" text="YES" />
+                              <Button mnemonicParsing="false" onAction="#refuseNewCard" prefHeight="26.0" prefWidth="46.0" text="NO" />
+                           </children></HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hBoxRetry" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Retry?" />
+                        <Button mnemonicParsing="false" onAction="#retryGame" prefHeight="26.0" prefWidth="51.0" text="YES" />
+                        <Button mnemonicParsing="false" onAction="#NoRetryGame" prefHeight="26.0" prefWidth="55.0" text="NO" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

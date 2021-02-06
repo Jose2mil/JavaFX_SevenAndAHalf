@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CardModel">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../CardModel/out/artifacts/CardModel_jar/CardModel.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
